@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>首页</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery-3.4.1.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../font/iconfont.css">
+
+    <style>
+
+
+        body{
+
+            background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+            background-attachment: fixed;
+        }
+        .click{
+            color: tomato;
+        }
+        .noneclick{
+            color: #3d7da7;
+        }
+        .iconfont{
+            font-family:"iconfont" !important;
+            font-size:18px;font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+            letter-spacing: 3px
+        }
+        .iconfont1{
+            letter-spacing: 3px;
+            font-family:"iconfont" !important;
+            font-size:14px;font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+            color: #31b0d5;
+        }
+    </style>
+    <!-- L2Dwidget.js L2D网页动画人物 -->
+    <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+    <script>
+        L2Dwidget.init({
+            "model": { "jsonPath":"https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json", "scale": 1, "hHeadPos":0.5, "vHeadPos":0.618 },
+            "display": { "position": "left", "width":40, "height": 60, "hOffset": 0, "vOffset": 0 },
+            "mobile": { "show": true, "scale": 0.5 },
+            "react": { "opacityDefault": 0.7, "opacityOnHover": 0.3 },
+
+
+        });
+    </script>
+    <!--
+        其他可选的模型：
+            小帅哥： https://unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json
+            萌娘：https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json
+            小可爱（女）：https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json
+            小可爱（男）：https://unpkg.com/live2d-widget-model-haruto@1.0.5/assets/haruto.model.json
+            初音：https://unpkg.com/live2d-widget-model-miku@1.0.5/assets/miku.model.json
+    -->
+</head>
+<body>
+
+
+<ul class="nav nav-pills nav-stacked  "  id="menu">
+    <li role="presentation"  ><a href="Pright_home.html" target="right" ><span class="noneclick"><div class="iconfont icon-shouye">首页</div></span></a></li>
+    <li role="presentation"  ><a href="../student/studentInformation/studentInformation.jsp" target="right"><span class="noneclick"><div class="iconfont icon-gerenxinxi1">个人信息</div></span></a></li>
+    <li role="presentation"><a href="../student/queeryClub/right_check.jsp" target="right"><span class="noneclick"><div class="iconfont icon-chakan1">查看社团信息</div></span></a></li>
+    <li role="presentation"><a href="../student/personalClub/personalClub.jsp" target="right"><span class="noneclick"><div class="iconfont icon-76xinzeng">我加入的社团</div></span></a></li>
+    <li role="presentation"><a href="../student/activity/all_activity.jsp" target="right"><span class="noneclick"><div class="iconfont icon-chakan1">查看活动信息</div></span></a></li>
+    <li role="presentation"><a href="../student/activity/personalActivity.jsp" target="right"><span class="noneclick"><div class="iconfont icon-76xinzeng">我加入的活动</div></span></a></li>
+    <li role="presentation"><a href="activity_apply.html" target="right"><span class="noneclick"><div class="iconfont icon-chuangjianhuodong">发布活动</div></span></a></li>
+</ul>
+
+<ul class="nav nav-tabs ">
+
+    <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <div class="iconfont icon-gerenxinxi1"> 社团管理 <span class="caret"></span> </div>
+        </a>
+        <ul class="dropdown-menu">
+            <li role="presentation"><a href="Pright_change.html" target="right" ><div class="iconfont1">社长换届</div></a></li>
+            <li role="presentation"><a href="Pright_number.jsp" target="right"><div class="iconfont1">查看人员</div></a></li>
+            <li role="presentation"><a href="Pright_club_check.jsp" target="right"><div class="iconfont1">社团审核</div></a></li>
+            <li role="presentation"><a href="Pright_activity_check.jsp" target="right"><div class="iconfont1">活动审核</div></a></li>
+        </ul>
+    </li>
+
+</ul>
+<script>
+    $('#menu li a span').click(function () {
+        var f = this;
+        $('#menu li a span').each(function () {
+            this.className = this == f ? 'click' : 'noneclick'
+        });
+    });
+</script>
+</body>
+</html>

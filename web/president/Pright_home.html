@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>首页</title>
+
+
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery-3.4.1.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <style>
+
+        .iconfont{
+            font-family:"iconfont" !important;
+            font-size:25px;font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body{
+            background-image: url("../image/背景01.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+
+        .container{
+            position: relative;
+            height: 600px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+
+
+        .container .card{
+            margin-top: 100px;
+            position: relative;
+            max-width: 330px;
+            height: 215px;
+            background: #fff;
+            margin: 50px 10px;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            /*box-shadow: 0 5px 202px rgba(0,0,0,0.5);*/
+            transition: .3s ease-in-out;
+        }
+
+        .container .card:hover{
+            height: 450px;
+        }
+
+        .container .card .imgBx{
+            position: relative;
+            width: 260px;
+            height: 260px;
+            top: -60px;
+            left: 20px;
+            z-index: 1;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .container .card .imgBx img{
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        .container .card .content{
+            position: relative;
+            margin-top: -140px;
+            padding: 10px 15px;
+            text-align: center;
+            color: #111;
+            visibility: hidden;
+            opacity: 0;
+            transition: .3s ease-in-out;
+        }
+
+        .container .card:hover .content{
+            visibility: visible;
+            opacity: 1;
+            margin-top: -40px;
+            transition-delay: .3s;
+        }
+        .x_title{
+            font-size: 15px;
+            color:tomato;
+            margin-left: 5px;
+        }
+        .fgx{
+            border-bottom: 2px solid #ee9900;;
+            margin-bottom: 15px;
+        }
+        .foot{
+            height: 40px;
+            font-size: 10px;
+            line-height:40px ;
+            text-align: center;
+            background-color: rgba(251,255,189,0);
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container" >
+
+    <div class="col-md-12">
+        <div class="iconfont icon-jiaru1 fgx "><span class="x_title">社团推荐</span></div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="imgBx">
+                        <a href="###1"><img src="../image/文学社.jpg" alt=""></a>
+                    </div>
+                    <div class="content">
+                        <h2>文学社</h2>
+                        <p>你是否习惯用文字记录那些懵懵岁月里走过的细碎之路，
+                            是否习惯提笔写下每一闪含里寂寞又美好的斑谰青春？
+                            为结交更多志同道合的文学爱好者，为发扬原创文字，
+                            为了让更多的朋友不再孤军奋战，文学社发放“英雄帖”，为校园文学充入新鲜血液。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="imgBx">
+                        <a href="###1"><img src="../image/12.jpg" alt=""></a>
+                    </div>
+                    <div class="content">
+                        <h2>轮滑社纳新啦</h2>
+                        <p>轮滑一直是一项积极，健康，热烈，活泼，富有朝气的体育运动，
+                            不论你对轮滑是否了解，是否曾经体验过这项活动的魅力，
+                            甚至不管你是否会进行轮滑，只要你喜欢这项运动就可以加入我们。
+                            我们将激发大家参加户外活动的积极性，拥有一个健康活力的体魄！
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="imgBx">
+                        <a href="###2"><img src="../image/10.jpg" alt=""></a>
+                    </div>
+                    <div class="content">
+                        <h2>篮球社招新</h2>
+                        <p>
+                            如果你热爱运动，如果你酷爱篮球，
+                            喜欢在球场上驰骋纵横的感觉，享受那份碰撞与对抗的激情，
+                            就加入我们篮球社吧，无篮球不兄弟，期待你的加入。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="imgBx">
+                        <a href="###3"><img src="../image/13.jpg" alt=""></a>
+                    </div>
+                    <div class="content">
+                        <h2>动漫社欢迎你</h2>
+                        <p>
+                            动漫生活，从此开始。体验动漫生活，感受动漫情调，追求动漫爱情，忆动漫人生。
+                            你是否感受过动漫中的迷离，你是否追忆过生活中的点滴。在这里，总有一种兴趣是你想要的；
+                            在这里，总有一种生活是你梦见的；在这里，是另一个自己；在这里，是另一个真实的你。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="imgBx">
+                        <a href="###4"><img src="../image/音乐社.png" alt=""></a>
+                    </div>
+                    <div class="content">
+                        <h2>音乐社招新啦</h2>
+                        <p>
+                            加入我们，我们会帮你发现自己的闪光点，让你发现美并创造美，
+                            让你的大学生活如理想般充实，快乐！
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="imgBx">
+                        <a href="###4"><img src="../image/西科杯篮球赛.png" alt=""></a>
+                    </div>
+                    <div class="content">
+                        <h2>西科杯篮球赛</h2>
+                        <p>
+                            为弘扬体育精神，增强同学们的体质，丰富同学的课余生活同时选拔大一新生篮球队员,备战校"新生杯"篮球赛，体育部现拟定举行西科杯篮球赛。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="container-fluid"  >
+    <div class="row">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"data-interval="3000" >
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="../image/社团招新1.png" alt="...">
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../image/社团招新3.png" alt="...">
+                    <div class="carousel-caption">
+
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../image/汉服社团.png" alt="...">
+                    <div class="carousel-caption">
+
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../image/摄影社.png" alt="...">
+                    <div class="carousel-caption">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="iconfont icon-xintubiao- fgx "style="margin:50px 50px 0 50px"><span class="x_title">学校通知</span></div>
+<div class="container" style="margin-top: -100px;margin-bottom: -100px">
+    <!--        <div class="iconfont icon-gonggao1 "> <span class="x_title"> 学校公告</span></div>-->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="iconfont icon-xinwen ">学校新闻</div>
+            <div class="list-group" style="width: 400px">
+                <a href="#" class="list-group-item ">
+                    <h4 class="list-group-item-heading">NEWS</h4>
+                    <p class="list-group-item-text">西安科技大学最新资讯</p>
+                </a>
+            </div>
+
+            <div class="list-group" style="width: 400px" >
+                <a href="#" class="list-group-item ">
+                    西安科技大学2020届毕业生就业质量年度报告发布！
+                </a>
+                <a href="#" class="list-group-item">祝贺！西安科技大学管理学院又获奖啦 </a>
+                <a href="#" class="list-group-item">2/15，西安科技大学全省首批</a>
+                <a href="#" class="list-group-item">西安科技大学2020年本科二批在江苏招生计划（理科）</a>
+                <a href="#" class="list-group-item">西安科技大学高新学院2020年度总结暨表彰大会将于本周五召开</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="iconfont icon-xinwen1 ">社团新闻</div>
+            <div class="list-group" style="">
+                <a href="#" class="list-group-item ">
+                    <h4 class="list-group-item-heading">NEWS</h4>
+                    <p class="list-group-item-text">西安科技大学学生社团最新动态</p>
+                </a>
+            </div>
+
+            <div class="list-group" style="width: 400px ">
+                <a href="#" class="list-group-item ">
+                    西安科技大学学生社团招新啦
+                </a><a href="#" class="list-group-item">关于实施西安科技大学学生社团二级管理的通知</a>
+                <a href="#" class="list-group-item">西安科技大学学生社团联合会点亮校园文化生活</a>
+                <a href="#" class="list-group-item">西安科技大学2020级迎新活动举办！</a>
+                <a href="#" class="list-group-item">西科团发〔2018〕39号关于成立共青团西安科技大学学生社团工作委员会的通知</a>
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="iconfont icon-gonggao1 " >社团公告</div>
+            <div class="list-group" style="width: 400px">
+                <a href="#" class="list-group-item ">
+                    <h4 class="list-group-item-heading">NEWS</h4>
+                    <p class="list-group-item-text">开学啦！快来加入我们的大家庭吧</p>
+                </a>
+            </div>
+
+            <div class="list-group" style="width: 400px">
+                <a href="#" class="list-group-item ">
+                    滑板社招新火热进行中！
+                </a>
+                <a href="#" class="list-group-item">西科杯篮球赛即将开始</a>
+                <a href="#" class="list-group-item">西安科技大学自行车协会承办西安市“烽火杯”自行车竞速赛</a>
+                <a href="#" class="list-group-item">爱心协会临潼区敬老院送温暖</a>
+                <a href="#" class="list-group-item">西安科技大学社团联合会举办“阳光杯”话剧大赛</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<footer class="container-fluid">
+    <div class="row">
+        <img src="../image/时尚网页设计页脚1.png" width="100%">
+    </div>
+    <div class="row foot">
+        西安科技大学社团 社团管理人员电话：019-7777777 其他电话：011-1111111 邮箱：XUST@shetuan.com
+    </div>
+</footer>
+</body>
+</html>

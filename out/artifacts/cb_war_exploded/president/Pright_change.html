@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<!--社长进行权限转让-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery-3.4.1.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <title>社长换届</title>
+<style>
+    body{
+        background: url("../image/背景10.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 25px;
+    }
+    .btn-lg{
+        display: block;
+        margin-left: 300px;
+        margin-right: auto;
+    }
+</style>
+
+</head>
+<body>
+<header class="header-wrap">
+    <div class="header-top">
+
+        <div class="page-header">
+            <h4>社团换届信息</h4>
+        </div>
+
+        <div>
+            <form class="form-horizontal" id="checkform" method="post"  target="_parent" onsubmit="identification()">
+				<div class="form-group">
+					<label class="col-md-1">下一任社长的学号:</label>
+					<div class="col-md-11">
+						<input class="form-control"  name="newSno" placeholder="请输入要转接的社长学号" style="width:30%">
+					</div>
+				</div>
+                <input  type="submit" id="a" class="btn-primary btn-lg" value="提交" >
+            </form>
+        </div>
+    </div>
+<script>
+    function getContextPath() {
+        var pathName=document.location.pathname;
+        var index=pathName.substr(1).indexOf("/");
+        var result=pathName.substr(0,index+1);
+        return result;
+    }
+    function identification() {
+        if(checkform.newSno.value=="")
+        {
+            alert("内容不能为空");
+            checkform.newSno.focus();
+            return false;
+        }
+        var flag=confirm("你确认要进行换届吗？此操作不可逆！")
+        if(flag){
+            var s=getContextPath();
+            document.getElementById("checkform").action=s+"/p_to_p";
+        }else {
+            return false;
+        }
+    }
+</script>
+</header>
+</body>
+</html>

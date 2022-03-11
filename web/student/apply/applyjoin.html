@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--学生申请创办社团-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../../js/jquery-3.4.1.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+    <title>西安科技大学学生社团管理系统</title>
+    <style>
+
+        body{
+            background-image: url("../../image/背景09.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .btn-lg{
+            display: block;
+            margin-left: 300px;
+            margin-right: auto;
+        }
+        .p_1{
+            color: #FFD026;
+            font-size: 20px;
+        }
+        .p_2{
+            color: #A6A6A6;
+        }
+        .p_3{
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10">
+<header class="header-wrap">
+    <div class="header-top">
+
+        <div class="page-header">
+            <p class="p_1">填写社团详细信息</p>
+            <p class="p_2"> USER CREATE<p>
+        </div>
+        <div>
+            <form class="form-horizontal" id="apply" method="post" onsubmit="appluClub()">
+                <div class="form-group">
+                    <label class="col-md-1">社团名称:</label>
+                    <div class="col-md-11">
+                        <input class="form-control" id="stu-name" name="Cname" placeholder="社团名称" style="width:100px">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-1" style="vertical-align: middle"> 社团类别:</label>
+                    <div class="col-md-11">
+                        <select style="width:100px" class="form-control" name="Cclass" id="grade-sort">
+                            <option>体育兴趣类</option>
+                            <option>文学文艺类</option>
+                            <option>社会实践类</option>
+                            <option>学术科技类</option>
+                            <option>娱乐休闲类</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-1" style="vertical-align: middle"> 归属学院:</label>
+                    <div class="col-md-11">
+                        <select style="width:100px" class="form-control" name="Csdept" id="grade-list">
+                            <option>通信学院</option>
+                            <option>艺术学院</option>
+                            <option>机械学院</option>
+                            <option>计算机学院</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-1">指导老师:</label>
+                    <div class="col-md-11">
+                        <input class="form-control" id="teach-name" name="Cteacher" placeholder="指导老师" style="width:100px">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-1">社团简介:</label>
+                    <div class="col-md-11">
+                        <textarea rows="" cols="" class="form-control" id="stu-intro"name="Ccomment" placeholder="社团简介" style="width:400px;height:100px"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-1">申请理由:</label>
+                    <div class="col-md-11">
+                        <textarea rows="" cols="" class="form-control" id="stu-reason" name="Creason" placeholder="申请理由" style="width:400px;height:100px"></textarea>
+                    </div>
+                </div>
+
+                <input  type="submit" class="btn-primary btn-lg" value="提交" />
+            </form>
+        </div>
+    </div>
+</header>
+        </div>
+        <div class="col-md-2" >
+            <a class="p_1">创建指南</a>
+            <p class="p_2">CREATE GUIDE<p>
+            <br><br>
+            <span class="glyphicon glyphicon-star" ></span> 如实填写表单信息
+            <br><br>
+            <span class="glyphicon glyphicon-star" ></span> 点击提交按钮
+            <br><br>
+            <span class="glyphicon glyphicon-star" ></span> 等待管理员审核
+            <br><br>
+            <a class="p_3" href="#">发现问题？</a>
+            <br><br>
+            <span class="glyphicon glyphicon-star" ></span> 联系我们
+            <br><br>
+            <span class="glyphicon glyphicon-star" ></span> 地址：西科大体育场
+            <br><br>
+            <span class="glyphicon glyphicon-star" ></span> 电话：123456
+            <br><br><br><br><br><br>
+            <span  class="glyphicon glyphicon-thumbs-up" >是否帮助到您？</span>
+        </div>
+
+    </div>
+</div>
+<script>
+    function getContextPath() {
+        var pathName=document.location.pathname;
+        var index=pathName.substr(1).indexOf("/");
+        var result=pathName.substr(0,index+1);
+        return result;
+    }
+    function appluClub() {
+        var s= getContextPath();
+        document.getElementById("apply").action = s+"/applySelect";
+    }
+</script>
+</body>
+</html>
